@@ -1,0 +1,11 @@
+ai-resume-analyzer/
+  README.md
+  requirements.txt
+  cli.py
+  resume_analyzer/
+    __init__.py
+    analyzer.py
+    scoring.py
+    keywords.py
+    rewrite.py
+    utils.py
