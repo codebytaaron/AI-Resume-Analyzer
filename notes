@@ -1,0 +1,8 @@
+
+---
+
+## Run it
+
+```bash
+pip install -r requirements.txt
+python cli.py path/to/resume.pdf --jd path/to/job_description.txt --rewrite
