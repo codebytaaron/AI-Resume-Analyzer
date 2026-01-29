@@ -1,0 +1,20 @@
+ai-resume-analyzer-platform/
+  app.py
+  requirements.txt
+  README.md
+  .gitignore
+
+  analyzer/
+    __init__.py
+    pdf_extract.py
+    scoring.py
+    keywords.py
+    bullets.py
+    report.py
+
+  templates/
+    index.html
+    result.html
+
+  static/
+    styles.css

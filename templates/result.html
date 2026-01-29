@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <title>Analysis Result</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Score: {{ report.score.total }}/100</h1>
+    <p>{{ report.summary }}</p>
+
+    <h2>Score Breakdown</h2>
+    <ul>
+      {% for k,v in report.score.breakdown.items() %}
+        <li>{{ k }}: {{ v }}</li>
+      {% endfor %}
+    </ul>
+
+    {% if report.missing_keywords %}
+      <h2>Missing Keywords</h2>
+      <div class="tags">
+        {% for kw in report.missing_keywords %}
+          <span class="tag">{{ kw }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if report.weak_bullets %}
+      <h2>Weak Bullet Points</h2>
+      <ul>
+        {% for b in report.weak_bullets %}
+          <li>{{ b }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <a href="/">Run another analysis</a>
+  </div>
+</body>
+</html>

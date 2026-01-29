@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <title>AI Resume Analyzer</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Analysis Console</h1>
+    <p>Upload a resume and optionally a job description.</p>
+
+    <form action="/analyze" method="post" enctype="multipart/form-data">
+      <input type="file" name="resume" required />
+      <textarea name="job_description" placeholder="Optional job description"></textarea>
+      <button type="submit">Analyze Resume</button>
+    </form>
+  </div>
+</body>
+</html>
